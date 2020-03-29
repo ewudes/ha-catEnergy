@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Гунчин](https://up.htmlacademy.ru/adaptive/19/user/68098).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://up.htmlacademy.ru/htmlcss/27/user/198062)
 
 ---
 
