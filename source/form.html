@@ -28,11 +28,69 @@
       </nav>
     </header>
     <main class="maincontent">
-      <section class="selection-form">
-        <!-- Секция появится в будущем -->
+      <section class="selection">
+        <h2 class="title">Подбор программы</h2>
+        <p class="selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="selection-form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="selection-form__group">
+            <legend class="visualy-hidden">Информация о питомце</legend>
+            <label class="selection-form__label" for="name">Имя:*</label>
+            <input type="text" id="name" name="name" class="selection-form__input" placeholder="Барсик">
+            <label class="selection-form__label" for="weight">Вес (кг):*</label>
+            <input type="text" id="weight" name="weight" class="selection-form__input" placeholder="7">
+            <label class="selection-form__label" for="age">Возраст (лет):*</label>
+            <input type="text" id="age" name="age" class="selection-form__input" placeholder="7">
+          </fieldset>
+          <fieldset class="selection-form__group">
+            <legend class="visualy-hidden">Программа</legend>
+            <input type="radio" id="loss" value="loss" name="program" class="selection-form__radio" checked>
+            <label class="selection-form__label" for="loss">Похудение</label>
+            <input type="radio" id="gain" value="gain" name="program" class="selection-form__radio">
+            <label class="selection-form__label" for="gain">Набор массы</label>
+            <input type="radio" id="unclear" value="unclear" name="program" class="selection-form__radio">
+            <label class="selection-form__label" for="unclear">Не знаю (нужен ваш совет)</label>
+          </fieldset>
+          <fieldset class="selection-form__group">
+            <legend class="visualy-hidden">Контактные данные</legend>
+            <h3 class="subtitle">Контактные данные (владельца кота)</h3>
+            <label class="selection-form__label" for="email">E-mail:*</label>
+            <input type="email" id="email" name="email" class="selection-form__input" placeholder="kuklachev@gmail.com">
+            <label class="selection-form__label" for="phone">Телефон:*</label>
+            <input type="tel" id="phone" name="phone" class="selection-form__input" pattern="[0-9] \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90">
+          </fieldset>
+          <fieldset class="selection-form__group">
+            <legend class="visualy-hidden">Комментарий</legend>
+            <h3 class="subtitle">Комментарий</h3>
+            <label for="comment" class="visualy-hidden">Расскажите обо всех повадках кота</label>
+            <textarea id="comment" class="selection-form__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="selection-form__group">
+            <legend class="visualy-hidden">Дополнительно</legend>
+            <h3 class="subtitle">Дополнительно</h3>
+            <input type="checkbox" id="sweetener" name="sweetener" checked class="selection-form__checkbox">
+            <label for="sweetener" class="selection-form__label">Сахорозаменитель</label>
+            <input type="checkbox" id="drinking" name="drinking" class="selection-form__checkbox">
+            <label for="drinking" class="selection-form__label">Питьевая вода</label>
+            <input type="checkbox" id="milk" name="milk" class="selection-form__checkbox">
+            <label for="milk" class="selection-form__label">Молоко</label>
+            <input type="checkbox" id="vitamins" name="vitamins" class="selection-form__checkbox">
+            <label for="vitamins" class="selection-form__label">Витамины</label>
+          </fieldset>
+          <button type="submit" class="button selection-form__btn-submit">Отправить заявку</button>
+          <p class="selection-form__remark">*&nbsp;—&nbsp;Обязательные поля</p>
+        </form>
       </section>
       <section class="location">
-        <!-- Секция появится в будущем -->
+        <h2 class="visualy-hidden">Адрес и располжение магазина</h2>
+        <div class="address">
+          <h3 class="address__title">
+            Приглашаем к сотрудничеству дилеров!
+          </h3>
+          <p class="address__description">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+          <div class="map"></div>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -51,8 +109,10 @@
         </li>
       </ul>
       <div class="copyright">
-        <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-academy">
+          HTML Academy
+          <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+        </a>
       </div>
     </footer>
   </body>
