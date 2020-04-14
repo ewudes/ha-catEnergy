@@ -1,4 +1,11 @@
-@import "variables.scss";
-@import "common.scss";
+@import "config/_variables.scss";
+@import "layout/_fonts.scss";
+@import "layout/_base.scss";
 
+@import "blocks/logo.scss";
+@import "blocks/nav.scss";
 @import "blocks/banner.scss";
+@import "blocks/selection.scss";
+@import "blocks/instructions.scss";
+@import "blocks/footer.scss";
+@import "blocks/copyright.scss";
