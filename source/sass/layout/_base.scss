@@ -15,10 +15,13 @@ body {
 }
 
 .button {
+  display: block;
   color: $white;
   background-color: $green;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  padding: 15px 0;
 }
 
 .title {

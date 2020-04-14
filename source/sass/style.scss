@@ -1,11 +1,20 @@
+// basic
 @import "config/_variables.scss";
 @import "layout/_fonts.scss";
 @import "layout/_base.scss";
 
+// common
+@import "blocks/header.scss";
 @import "blocks/logo.scss";
 @import "blocks/nav.scss";
+@import "blocks/footer.scss";
+@import "blocks/copyright.scss";
+
+// index
 @import "blocks/banner.scss";
 @import "blocks/selection.scss";
 @import "blocks/instructions.scss";
-@import "blocks/footer.scss";
-@import "blocks/copyright.scss";
+
+// catalog
+@import "blocks/catalog.scss";
+@import "blocks/product-card.scss";
