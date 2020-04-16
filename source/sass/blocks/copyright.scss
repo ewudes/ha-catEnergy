@@ -1,5 +1,5 @@
 .logo-academy {
-  font-family: Arial;
+  @include arial();
   font-size: 16px;
   line-height: 16px;
   color: $darkgrey;

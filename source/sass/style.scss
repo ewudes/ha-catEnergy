@@ -1,8 +1,11 @@
 @import "normalize";
 // basic
-@import "config/_variables.scss";
-@import "layout/_fonts.scss";
-@import "layout/_base.scss";
+@import "config/variables.scss";
+@import "layout/fonts.scss";
+@import "config/mixins.scss";
+@import "layout/base.scss";
+@import "layout/button.scss";
+@import "layout/title.scss";
 
 // common
 @import "blocks/header.scss";

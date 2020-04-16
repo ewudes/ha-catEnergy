@@ -3,11 +3,10 @@
 }
 
 .instructions__list {
-  list-style: none;
-  padding: 0;
+  @include reset-list-styles();
 }
 
 .instructions__item {
-  font-family: Arial;
+  @include arial();
   color: $darkgrey;
 }

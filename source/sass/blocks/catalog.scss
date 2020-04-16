@@ -1,18 +1,18 @@
-.catalog .title{
+.catalog .title {
   border-top: 1px solid $grey;
   margin: 0;
   padding: 20px;
 }
 
 .catalog__list {
-  list-style: none;
-  padding: 0;
+  @include reset-list-styles();
   margin: 0;
 }
 
 .catalog__item {
   border-bottom: 1px solid $grey;
   padding: 20px;
+
   &:first-child {
     border-top: 1px solid $grey;
   }
@@ -25,8 +25,8 @@
   border-bottom: 1px solid $grey;
 }
 
-.catalog__more p {
-  font-family: Arial;
+.catalog__tagline {
+  @include arial();
   font-size: 12px;
   text-align: center;
 }
