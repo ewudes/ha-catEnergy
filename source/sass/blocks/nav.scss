@@ -1,0 +1,21 @@
+.nav__list {
+  @include reset-list-styles();
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.nav__item {
+  border-top: 1px solid $grey;
+}
+
+.nav__link {
+  display: block;
+
+  @include oswald($medium);
+  font-size: 20px;
+  line-height: 20px;
+  color: inherit;
+  text-decoration: none;
+  padding: 20px 0;
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+.catalog .title {
+  border-top: 1px solid $grey;
+  margin: 0;
+  padding: 20px;
+}
+
+.catalog__list {
+  @include reset-list-styles();
+  margin: 0;
+}
+
+.catalog__item {
+  border-bottom: 1px solid $grey;
+  padding: 20px;
+
+  &:first-child {
+    border-top: 1px solid $grey;
+  }
+}
+
+.catalog__more {
+  padding: 0 20px;
+  padding-bottom: 25px;
+  padding-top: 80px;
+  border-bottom: 1px solid $grey;
+}
+
+.catalog__tagline {
+  @include arial();
+  font-size: 12px;
+  text-align: center;
+}
+
+.catalog__subtitle {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.catalog__btn-more {
+  background-color: $grey;
+  color: $darkgrey;
+}
