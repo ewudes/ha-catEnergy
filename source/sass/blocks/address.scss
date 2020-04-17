@@ -1,0 +1,12 @@
+.address__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.address__description {
+  @include arial();
+  line-height: 20px;
+  color: $darkgrey;
+}
