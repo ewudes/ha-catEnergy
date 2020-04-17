@@ -1,0 +1,26 @@
+.optional {
+  padding: 0 20px;
+}
+.optional__list {
+  @include reset-list-styles();
+}
+
+.optional__item {
+  padding: 15px 0;
+  border-bottom: 1px solid $grey;
+
+  &:first-child {
+    border-top: 1px solid $grey;
+  }
+}
+
+.optional-card__title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.optional-card__meta {
+  @include arial();
+}

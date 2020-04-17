@@ -5,6 +5,7 @@
 @import "layout/base.scss";
 @import "blocks/button.scss";
 @import "blocks/title.scss";
+@import "blocks/subtitle.scss";
 
 // common
 @import "blocks/header.scss";
@@ -23,3 +24,5 @@
 // catalog
 @import "blocks/catalog.scss";
 @import "blocks/product-card.scss";
+@import "blocks/optional.scss";
+@import "blocks/gift.scss";
