@@ -5,7 +5,11 @@
 }
 
 .nav__item {
-  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+
+  &:first-child {
+    border-top: 1px solid $grey;
+  }
 }
 
 .nav__link {
