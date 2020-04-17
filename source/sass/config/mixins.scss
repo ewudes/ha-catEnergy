@@ -2,3 +2,12 @@
   list-style: none;
   padding: 0;
 }
+
+@mixin oswald($weight) {
+  font-family: "Oswald", "Helvetica", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin arial() {
+  font-family: "Arial", sans-serif;
+}

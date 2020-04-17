@@ -1,0 +1,12 @@
+.example {
+  background-color: $grey;
+  padding: 0 20px;
+}
+
+.example__description {
+  @include arial();
+}
+
+.example__costs {
+  text-align: center;
+}
