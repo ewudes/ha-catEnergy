@@ -1,6 +1,7 @@
 .optional {
   padding: 0 20px;
 }
+
 .optional__list {
   @include reset-list-styles();
 }

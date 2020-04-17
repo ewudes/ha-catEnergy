@@ -1,7 +1,7 @@
 .gift {
   min-height: 289px;
   padding: 0 60px;
-  background-image: url('../img/gift-photo-mobile@1x.jpg');
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: $green;
   background-position: center;
@@ -9,6 +9,7 @@
 
 .gift__description {
   color: $white;
+
   @include arial();
   font-size: 16px;
   line-height: 20px;
