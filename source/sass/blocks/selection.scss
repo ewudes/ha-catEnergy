@@ -1,6 +1,9 @@
+.selection {
+  padding: 0 20px;
+}
+
 .selection__list {
   @include reset-list-styles();
-  padding: 0 20px;
 }
 
 .selection__item {
@@ -26,6 +29,11 @@
   margin-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #dadada;
+
+  &--form {
+    @include oswald($regular);
+    border: none;
+  }
 }
 
 .selection__link {

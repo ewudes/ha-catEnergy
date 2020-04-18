@@ -31,10 +31,10 @@
     <main class="maincontent">
       <section class="selection">
         <h2 class="title">Подбор программы</h2>
-        <p class="selection__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="selection__description selection__description--form">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="selection-form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="selection-form__group">
-            <legend class="visualy-hidden">Информация о питомце</legend>
+            <legend class="visually-hidden">Информация о питомце</legend>
             <label class="selection-form__label" for="name">Имя:*</label>
             <input type="text" id="name" name="name" class="selection-form__input" placeholder="Барсик">
             <label class="selection-form__label" for="weight">Вес (кг):*</label>
@@ -43,7 +43,7 @@
             <input type="text" id="age" name="age" class="selection-form__input" placeholder="7">
           </fieldset>
           <fieldset class="selection-form__group">
-            <legend class="visualy-hidden">Программа</legend>
+            <legend class="visually-hidden">Программа</legend>
             <input type="radio" id="loss" value="loss" name="program" class="selection-form__radio" checked>
             <label class="selection-form__label" for="loss">Похудение</label>
             <input type="radio" id="gain" value="gain" name="program" class="selection-form__radio">
@@ -52,7 +52,7 @@
             <label class="selection-form__label" for="unclear">Не знаю (нужен ваш совет)</label>
           </fieldset>
           <fieldset class="selection-form__group">
-            <legend class="visualy-hidden">Контактные данные</legend>
+            <legend class="visually-hidden">Контактные данные</legend>
             <h3 class="subtitle">Контактные данные (владельца кота)</h3>
             <label class="selection-form__label" for="email">E-mail:*</label>
             <input type="email" id="email" name="email" class="selection-form__input" placeholder="kuklachev@gmail.com">
@@ -60,13 +60,13 @@
             <input type="tel" id="phone" name="phone" class="selection-form__input" pattern="[0-9] \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90">
           </fieldset>
           <fieldset class="selection-form__group">
-            <legend class="visualy-hidden">Комментарий</legend>
+            <legend class="visually-hidden">Комментарий</legend>
             <h3 class="subtitle">Комментарий</h3>
-            <label for="comment" class="visualy-hidden">Расскажите обо всех повадках кота</label>
+            <label for="comment" class="visually-hidden">Расскажите обо всех повадках кота</label>
             <textarea id="comment" class="selection-form__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="selection-form__group">
-            <legend class="visualy-hidden">Дополнительно</legend>
+            <legend class="visually-hidden">Дополнительно</legend>
             <h3 class="subtitle">Дополнительно</h3>
             <input type="checkbox" id="sweetener" name="sweetener" checked class="selection-form__checkbox">
             <label for="sweetener" class="selection-form__label">Сахорозаменитель</label>
@@ -82,7 +82,7 @@
         </form>
       </section>
       <section class="location">
-        <h2 class="visualy-hidden">Адрес и располжение магазина</h2>
+        <h2 class="visually-hidden">Адрес и располжение магазина</h2>
         <div class="address">
           <h3 class="address__title">
             Приглашаем к сотрудничеству дилеров!
@@ -90,8 +90,8 @@
           <p class="address__description">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
-          <div class="map"></div>
         </div>
+        <div class="map"></div>
       </section>
     </main>
     <footer class="footer">

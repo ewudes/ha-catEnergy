@@ -1,4 +1,3 @@
-@import "normalize";
 // basic
 @import "config/variables.scss";
 @import "layout/fonts.scss";
@@ -6,19 +5,29 @@
 @import "layout/base.scss";
 @import "blocks/button.scss";
 @import "blocks/title.scss";
+@import "blocks/subtitle.scss";
 
 // common
 @import "blocks/header.scss";
 @import "blocks/logo.scss";
 @import "blocks/nav.scss";
+@import "blocks/location.scss";
+@import "blocks/address.scss";
 @import "blocks/footer.scss";
+@import "blocks/map.scss";
 @import "blocks/copyright.scss";
 
 // index
 @import "blocks/banner.scss";
 @import "blocks/selection.scss";
 @import "blocks/instructions.scss";
+@import "blocks/example.scss";
 
 // catalog
 @import "blocks/catalog.scss";
 @import "blocks/product-card.scss";
+@import "blocks/optional.scss";
+@import "blocks/gift.scss";
+
+//form
+@import "blocks/selection-form.scss";

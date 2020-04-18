@@ -1,0 +1,36 @@
+.selection-form__group {
+  border: none;
+  padding: 10px 0;
+
+  &:nth-child(2) {
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+  }
+}
+
+.selection-form__label {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.selection-form__input,
+.selection-form__comment {
+  text-transform: uppercase;
+  color: $darkgrey;
+}
+
+.selection-form__comment {
+  width: 100%;
+  border: 1px solid $grey;
+  resize: none;
+}
+
+.selection-form__btn-submit {
+  border: none;
+  width: 100%;
+}
+
+.selection-form__remark {
+  @include arial();
+  text-align: center;
+}
