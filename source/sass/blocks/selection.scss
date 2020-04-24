@@ -1,4 +1,4 @@
-.selection {
+.selection .title {
   padding: 0 20px;
 }
 
@@ -33,6 +33,7 @@
   &--form {
     @include oswald($regular);
     border: none;
+    padding: 0 20px;
   }
 }
 

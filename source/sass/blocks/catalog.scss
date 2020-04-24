@@ -1,6 +1,5 @@
 .catalog .title {
-  margin: 0;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .catalog__list {
@@ -10,7 +9,7 @@
 
 .catalog__item {
   border-bottom: 1px solid $grey;
-  padding: 20px;
+  padding: 0 20px;
 
   &:first-child {
     border-top: 1px solid $grey;
