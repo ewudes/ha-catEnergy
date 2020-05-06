@@ -1,0 +1,22 @@
+@media (min-width: $tablet-width) {
+  .slider {
+    background-color: $grey;
+    margin: 0 -30px;
+    padding: 0 90px;
+  }
+
+  .slider__img-wrap {
+    min-height: 499px;
+    background-image: url("../img/before-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider__controls {
+    display: flex;
+  }
+
+  .slider__range {
+    flex-grow: 1;
+  }
+}

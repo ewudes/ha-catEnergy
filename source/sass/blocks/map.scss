@@ -4,3 +4,9 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (min-width: $tablet-width) {
+  .map {
+    background-image: url("../img/bg-map-tablet@1x.png");
+  }
+}

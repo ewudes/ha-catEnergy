@@ -14,3 +14,22 @@
   line-height: 20px;
   color: $darkgrey;
 }
+
+@media (min-width: $tablet-width) {
+  .address {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .address__title {
+    width: 180px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .address__description {
+    width: 180px;
+    font-size: 16px;
+  }
+}

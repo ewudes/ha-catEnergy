@@ -4,3 +4,9 @@
   line-height: 60px;
   margin: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 60px;
+  }
+}

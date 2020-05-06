@@ -3,3 +3,18 @@
   margin: 0 auto;
   background-color: $grey;
 }
+
+@media (min-width: $tablet-width) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .footer {
+    width: 1440px;
+  }
+}
