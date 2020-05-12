@@ -1,5 +1,6 @@
 .instructions {
-  padding: 0 20px;
+
+  @include horizontal-padding($mobile-padding)
 }
 
 .instructions__list {
@@ -13,7 +14,11 @@
 
 @media (min-width: $tablet-width) {
   .instructions {
-    padding: 0 30px;
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
   }
 
   .instructions__list {
@@ -30,10 +35,18 @@
 
 @media (min-width: $desktop-width) {
   .instructions {
-    padding: 0 70px;
+    width: $desktop-width;
+
+    @include horizontal-padding($desktop-padding);
   }
 
   .instructions__list {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  .instructions__item {
+    width: 295px;
   }
 }

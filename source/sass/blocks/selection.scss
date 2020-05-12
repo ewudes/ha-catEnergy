@@ -1,9 +1,9 @@
-.selection .title {
-  padding: 0 20px;
+.selection {
+
+  @include horizontal-padding($mobile-padding);
 }
 
 .selection__list {
-  margin: 0 20px;
 
   @include reset-list-styles();
 }
@@ -50,8 +50,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .selection__list {
-    margin: 0 30px;
+  .selection {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
   }
 
   .selection__title {
@@ -71,11 +75,20 @@
 }
 
 @media (min-width: $desktop-width) {
+  .selection {
+    width: $desktop-width;
+
+    @include horizontal-padding($desktop-padding);
+  }
+
   .selection__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .selection__item {
-    margin: 0 40px;
+    width: 570px;
+    box-sizing: border-box;
   }
 }

@@ -3,10 +3,28 @@
   font-weight: 400;
   line-height: 60px;
   margin: 0;
+
+  &--catalog,
+  &--selection {
+    @include horizontal-padding($mobile-padding);
+  }
 }
 
 @media (min-width: $tablet-width) {
   .title {
     font-size: 60px;
+
+    &--catalog {
+      @include horizontal-padding($tablet-padding);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+
+    &--catalog {
+      padding: 0 40px;
+    }
   }
 }

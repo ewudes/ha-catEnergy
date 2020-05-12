@@ -1,16 +1,16 @@
 .maincontent {
-  width: 320px;
+  min-width: $mobile-width;
   margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .maincontent {
-    width: 768px;
+    min-width: $tablet-width;
   }
 }
 
 @media (min-width: $desktop-width) {
   .maincontent {
-    width: 1440px;
+    min-width: $desktop-width;
   }
 }

@@ -1,5 +1,5 @@
 .address {
-  padding: 0 20px;
+  @include horizontal-padding($mobile-padding);
 }
 
 .address__title {
@@ -19,7 +19,7 @@
   .address {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    @include horizontal-padding($tablet-padding);
   }
 
   .address__title {
