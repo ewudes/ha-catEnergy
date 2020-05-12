@@ -1,8 +1,6 @@
 @media (min-width: $tablet-width) {
   .slider {
     background-color: $grey;
-    margin: 0 -30px;
-    padding: 0 90px;
   }
 
   .slider__img-wrap {
@@ -14,6 +12,11 @@
 
   .slider__controls {
     display: flex;
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
   }
 
   .slider__range {

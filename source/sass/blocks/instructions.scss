@@ -1,6 +1,5 @@
 .instructions {
-
-  @include horizontal-padding($mobile-padding)
+  @include horizontal-padding($mobile-padding);
 }
 
 .instructions__list {
@@ -43,7 +42,6 @@
   .instructions__list {
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .instructions__item {

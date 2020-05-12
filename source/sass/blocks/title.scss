@@ -15,16 +15,7 @@
     font-size: 60px;
 
     &--catalog {
-      @include horizontal-padding($tablet-padding);
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .title {
-
-    &--catalog {
-      padding: 0 40px;
+      padding: 0;
     }
   }
 }

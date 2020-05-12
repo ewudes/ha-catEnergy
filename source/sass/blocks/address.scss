@@ -19,6 +19,7 @@
   .address {
     display: flex;
     justify-content: space-between;
+
     @include horizontal-padding($tablet-padding);
   }
 

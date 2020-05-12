@@ -5,6 +5,7 @@
 .header__wrap {
   display: flex;
   justify-content: space-between;
+
   @include horizontal-padding($mobile-padding);
 }
 
@@ -12,6 +13,7 @@
   .header {
     display: flex;
     width: $tablet-width;
+
     @include horizontal-padding($tablet-padding);
     padding-top: 30px;
     box-sizing: border-box;
@@ -29,6 +31,7 @@
 @media (min-width: $desktop-width) {
   .header {
     width: $desktop-width;
+
     @include horizontal-padding($desktop-padding);
 
     &--index {

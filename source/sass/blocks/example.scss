@@ -1,6 +1,7 @@
 .example {
   background-color: $grey;
-  padding: 0 20px;
+
+  @include horizontal-padding($mobile-padding);
 }
 
 .example__description {
@@ -15,7 +16,15 @@
   .example {
     border-top: 2px solid $grey;
     background-color: inherit;
-    padding: 0 30px;
+    padding: 0;
+  }
+
+  .example__wrap {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
   }
 
   .example__description {

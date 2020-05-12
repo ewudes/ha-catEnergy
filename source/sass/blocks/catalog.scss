@@ -8,7 +8,8 @@
 
 .catalog__item {
   border-bottom: 1px solid $grey;
-  padding: 0 20px;
+
+  @include horizontal-padding($mobile-padding);
 
   &:first-child {
     border-top: 1px solid $grey;
@@ -39,16 +40,25 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .catalog__item {
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0;
     border: none;
-    width: 50%;
+    width: 324px;
     align-self: stretch;
 
     &:first-child {
@@ -69,18 +79,16 @@
 @media (min-width: $desktop-width) {
   .catalog {
     width: $desktop-width;
-    margin: 0 auto;
+
+    @include horizontal-padding($desktop-padding);
   }
 
   .catalog__list {
-    width: 1300px;
-    margin: 0 auto;
+    justify-content: space-between;
   }
 
   .catalog__item {
     width: 245px;
-    padding: 0;
-    margin: 0 40px;
   }
 
   .catalog__subtitle {

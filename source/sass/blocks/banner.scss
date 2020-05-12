@@ -2,7 +2,7 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: #63A73A;
+  background-color: #63a73a;
   color: $white;
 }
 
@@ -42,6 +42,7 @@
     width: $tablet-width;
     margin: 0 auto;
     box-sizing: border-box;
+
     @include horizontal-padding(165px);
   }
 
