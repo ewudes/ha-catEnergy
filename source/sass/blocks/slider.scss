@@ -1,0 +1,25 @@
+@media (min-width: $tablet-width) {
+  .slider {
+    background-color: $grey;
+  }
+
+  .slider__img-wrap {
+    min-height: 499px;
+    background-image: url("../img/before-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider__controls {
+    display: flex;
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .slider__range {
+    flex-grow: 1;
+  }
+}

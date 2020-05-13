@@ -1,5 +1,5 @@
 .address {
-  padding: 0 20px;
+  @include horizontal-padding($mobile-padding);
 }
 
 .address__title {
@@ -13,4 +13,24 @@
   @include arial();
   line-height: 20px;
   color: $darkgrey;
+}
+
+@media (min-width: $tablet-width) {
+  .address {
+    display: flex;
+    justify-content: space-between;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .address__title {
+    width: 180px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .address__description {
+    width: 180px;
+    font-size: 16px;
+  }
 }

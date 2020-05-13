@@ -11,3 +11,8 @@
 @mixin arial() {
   font-family: "Arial", sans-serif;
 }
+
+@mixin horizontal-padding($value) {
+  padding-left: $value;
+  padding-right: $value;
+}

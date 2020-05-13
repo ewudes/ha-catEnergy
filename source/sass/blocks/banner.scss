@@ -2,9 +2,12 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: $green;
+  background-color: #63a73a;
   color: $white;
-  padding: 0 20px;
+}
+
+.banner__wrap {
+  @include horizontal-padding($mobile-padding);
 }
 
 .banner__title {
@@ -22,4 +25,75 @@
   text-transform: uppercase;
   text-align: center;
   margin-top: 20px;
+}
+
+.banner__pic {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .banner {
+    background: none;
+    color: $black;
+  }
+
+  .banner__wrap {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding(165px);
+  }
+
+  .banner__title,
+  .banner__subtitle {
+    text-align: left;
+  }
+
+  .banner__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .banner__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .banner__btn-selection {
+    width: 245px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner {
+    min-height: 546px;
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(90deg, $green 50%);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-clip: border-box;
+    background-size: 50%;
+    padding-top: 150px;
+  }
+
+  .banner__wrap {
+    position: relative;
+    width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 150px;
+    box-sizing: border-box;
+  }
+
+  .banner__title {
+    width: 420px;
+  }
+
+  .banner__image {
+    position: absolute;
+    top: 30%;
+    left: 47%;
+  }
 }

@@ -23,14 +23,14 @@
             <a href="catalog.html" class="nav__link">Каталог продукции</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link">Подбор программы</a>
+            <a class="nav__link nav__link--active">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="maincontent">
       <section class="selection">
-        <h2 class="title">Подбор программы</h2>
+        <h2 class="title title--selection">Подбор программы</h2>
         <p class="selection__description selection__description--form">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="selection-form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="selection-form__group">
@@ -77,8 +77,10 @@
             <input type="checkbox" id="vitamins" name="vitamins" class="selection-form__checkbox">
             <label for="vitamins" class="selection-form__label">Витамины</label>
           </fieldset>
-          <button type="submit" class="button selection-form__btn-submit">Отправить заявку</button>
-          <p class="selection-form__remark">*&nbsp;—&nbsp;Обязательные поля</p>
+          <fieldset class="selection-form__group">
+            <button type="submit" class="button selection-form__btn-submit">Отправить заявку</button>
+            <p class="selection-form__remark">*&nbsp;—&nbsp;Обязательные поля</p>
+          </fieldset>
         </form>
       </section>
       <section class="location">
@@ -95,25 +97,27 @@
       </section>
     </main>
     <footer class="footer">
-      <a class="logo">
-        <span class="logo__title logo__title--footer"><strong>Cat </strong>energy</span>
-      </a>
-      <ul class="social">
-        <li class="social__item">
-          <a href="" class="social__link social__link--vk">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link social__link--in">Инстаграм</a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link social__link--fb">Фейсбук</a>
-        </li>
-      </ul>
-      <div class="copyright">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-academy">
-          HTML Academy
-          <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+      <div class="footer__wrap">
+        <a class="logo">
+          <span class="logo__title logo__title--footer"><strong>Cat </strong>energy</span>
         </a>
+        <ul class="social">
+          <li class="social__item">
+            <a href="" class="social__link social__link--vk">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link social__link--in">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link social__link--fb">Фейсбук</a>
+          </li>
+        </ul>
+        <div class="copyright">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="logo-academy">
+            HTML Academy
+            <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

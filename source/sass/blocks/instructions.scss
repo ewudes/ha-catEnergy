@@ -1,5 +1,5 @@
 .instructions {
-  padding: 0 20px;
+  @include horizontal-padding($mobile-padding);
 }
 
 .instructions__list {
@@ -9,4 +9,42 @@
 .instructions__item {
   @include arial();
   color: $darkgrey;
+}
+
+@media (min-width: $tablet-width) {
+  .instructions {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .instructions__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .instructions__item {
+    width: 50%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instructions {
+    width: $desktop-width;
+
+    @include horizontal-padding($desktop-padding);
+  }
+
+  .instructions__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .instructions__item {
+    width: 295px;
+  }
 }

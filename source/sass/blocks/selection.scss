@@ -1,5 +1,5 @@
 .selection {
-  padding: 0 20px;
+  @include horizontal-padding($mobile-padding);
 }
 
 .selection__list {
@@ -8,7 +8,8 @@
 
 .selection__item {
   background-color: $grey;
-  padding: 0 20px;
+
+  @include horizontal-padding($mobile-padding);
   padding-top: 40px;
   margin-bottom: 20px;
 }
@@ -33,6 +34,7 @@
   &--form {
     @include oswald($regular);
     border: none;
+    padding: 0 20px;
   }
 }
 
@@ -44,4 +46,48 @@
   text-transform: uppercase;
   font-size: 16px;
   padding: 15px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .selection {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .selection__title {
+    text-align: left;
+    font-size: 36px;
+  }
+
+  .selection__description {
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .selection__link {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection {
+    width: $desktop-width;
+
+    @include horizontal-padding($desktop-padding);
+  }
+
+  .selection__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .selection__item {
+    width: 570px;
+    box-sizing: border-box;
+  }
 }
