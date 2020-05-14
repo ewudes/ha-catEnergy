@@ -1,11 +1,19 @@
 .selection-form__group {
+  display: flex;
+  flex-direction: column;
   border: none;
   padding: 10px 20px;
+  margin: 0;
 
   &:nth-child(2) {
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
   }
+}
+
+.selection-form__row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .selection-form__label {
@@ -15,6 +23,7 @@
 
 .selection-form__input,
 .selection-form__comment {
+  flex-grow: 1;
   text-transform: uppercase;
   color: $darkgrey;
 }
@@ -33,4 +42,52 @@
 .selection-form__remark {
   @include arial();
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .selection-form__group {
+    &--optional {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid $grey;
+      border-right: 1px solid $grey;
+    }
+  }
+
+  .selection-form__row {
+    &--optional {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .selection-form__group {
+    flex-basis: 100%;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      box-sizing: border-box;
+      flex-basis: 50%;
+    }
+
+    &--contacts {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .selection-form__row {
+      &--contacts {
+        width: 50%;
+      }
+    }
+  }
 }
