@@ -1,4 +1,4 @@
-.address {
+.address__wrap {
   @include horizontal-padding($mobile-padding);
 }
 
@@ -16,11 +16,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .address {
+  .address__wrap {
     display: flex;
     justify-content: space-between;
-
-    @include horizontal-padding($tablet-padding);
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 70px;
   }
 
   .address__title {
@@ -32,5 +34,26 @@
   .address__description {
     width: 180px;
     font-size: 16px;
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $desktop-width;
+  }
+
+  .address__wrap {
+    width: 570px;
+    background-color: $white;
+    transform: translate(-290px, 80px);
+  }
+
+  .address__description {
+    text-align: left;
   }
 }

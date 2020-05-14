@@ -1,6 +1,8 @@
 .example {
   background-color: $grey;
+}
 
+.example__wrap {
   @include horizontal-padding($mobile-padding);
 }
 
@@ -20,6 +22,10 @@
   }
 
   .example__wrap {
+    padding: 0;
+  }
+
+  .example__info {
     width: $tablet-width;
     margin: 0 auto;
     box-sizing: border-box;
@@ -32,7 +38,7 @@
     line-height: 24px;
   }
 
-  .example__info {
+  .example__total {
     display: flex;
   }
 
@@ -52,5 +58,29 @@
     width: 170px;
     margin-left: auto;
     text-align: right;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .example {
+    border: none;
+    margin-top: 150px;
+    background-color: $grey;
+  }
+
+  .example__wrap {
+    display: flex;
+    width: $desktop-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($desktop-padding);
+
+  }
+
+  .example__info {
+    padding: 0;
+    margin: 0;
   }
 }
