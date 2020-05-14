@@ -1,3 +1,36 @@
 .optional-card {
   margin: 0 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .optional-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .optional-card__title,
+  .optional-card__meta {
+    width: 50%;
+  }
+
+  .optional-card__btn-order {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .optional-card {
+    flex-wrap: nowrap;
+  }
+
+  .optional-card__title,
+  .optional-card__meta,
+  .optional-card__btn-order {
+    width: 30%;
+  }
+
+  .optional-card__btn-order {
+    padding: 10px 0;
+  }
+}

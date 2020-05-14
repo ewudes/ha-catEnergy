@@ -21,3 +21,43 @@
 .optional-card__meta {
   @include arial();
 }
+
+@media (min-width: $tablet-width) {
+  .optional {
+    width: $tablet-width;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include horizontal-padding($tablet-padding);
+  }
+
+  .optional__item {
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .optional {
+    display: flex;
+    flex-wrap: wrap;
+    width: $desktop-width;
+    margin-bottom: 30px;
+
+    @include horizontal-padding($desktop-padding);
+  }
+
+  .optional__item {
+    border: none;
+    border-bottom: 2px solid $grey;
+
+    &:first-child {
+      border-top: 2px solid $grey;
+    }
+  }
+
+  .optional__list {
+    flex-grow: 3;
+    margin: 0;
+  }
+}

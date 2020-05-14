@@ -7,3 +7,18 @@
     @include horizontal-padding($mobile-padding);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .subtitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subtitle {
+    &--optional {
+      width: 100%;
+    }
+  }
+}
