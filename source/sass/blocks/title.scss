@@ -19,3 +19,11 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .title {
+    &--example {
+      transform: translateY(-110px);
+    }
+  }
+}

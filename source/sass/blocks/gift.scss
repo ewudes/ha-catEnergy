@@ -1,7 +1,7 @@
 .gift {
+  width: 280px;
   min-height: 289px;
-  padding: 0 60px;
-  margin: 0 20px;
+  margin: 0 auto;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: $green;
@@ -15,4 +15,20 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .gift {
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    width: 245px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    margin-left: 20px;
+  }
 }

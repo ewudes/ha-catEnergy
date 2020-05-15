@@ -5,3 +5,9 @@
     background-color: $white;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .location {
+    position: relative;
+  }
+}

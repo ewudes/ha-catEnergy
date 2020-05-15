@@ -7,3 +7,51 @@
     @include horizontal-padding($mobile-padding);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .subtitle {
+    position: relative;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 60%;
+      right: 0;
+      width: 100vw;
+      height: 4px;
+      background-color: $green;
+      z-index: -1;
+      transform: translateX(-680px);
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 60%;
+      width: 100vw;
+      height: 4px;
+      background-color: $green;
+      z-index: -1;
+      transform: translateX(20px);
+    }
+
+    &--optional {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subtitle {
+    &::before {
+      transform: translateX(-1200px);
+    }
+
+    &--contacts {
+      width: 100%;
+    }
+  }
+}
