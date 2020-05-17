@@ -1,7 +1,6 @@
-.logo-academy {
-  @include arial();
-  font-size: 16px;
-  line-height: 16px;
-  color: $darkgrey;
-  text-decoration: none;
+@media (min-width: $tablet-width) {
+  .copyright {
+    display: flex;
+    align-items: center;
+  }
 }
