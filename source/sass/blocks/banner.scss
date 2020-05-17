@@ -1,7 +1,7 @@
 .banner {
-  background-image: linear-gradient(to top,#fff 180px,transparent 180px),url("../img/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(to top, #ffffff 180px, transparent 180px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom,center bottom 180px;
+  background-position: center bottom, center bottom 180px;
   background-color: #63a73a;
   color: $white;
 }
@@ -55,6 +55,7 @@
   .banner__title,
   .banner__subtitle {
     text-align: left;
+
     @include horizontal-padding(95px);
   }
 
@@ -88,11 +89,11 @@
 @media (min-width: $desktop-width) {
   .banner {
     min-height: 546px;
-    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(90deg, $green 50%);
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, transparent 50%, $green 0);
     background-repeat: no-repeat;
     background-position: right;
     background-clip: border-box;
-    background-size: 50%;
+    background-size: 50%, 100%;
     padding-top: 150px;
   }
 
@@ -127,6 +128,6 @@
 
   .banner__btn-selection {
     top: 307px;
-    left: 190px
+    left: 190px;
   }
 }
