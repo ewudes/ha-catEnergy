@@ -4,6 +4,14 @@
   text-decoration: none;
   align-items: center;
   flex-grow: 1;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__pic {
@@ -26,6 +34,14 @@
     margin: 0 auto;
     padding: 40px 0;
     font-size: 28px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -44,11 +60,19 @@
     width: 40px;
     height: 42px;
     margin-left: auto;
-
-    path {
-      fill: $darkgrey;
-    }
   }
+
+  &:hover .logo__academy-fill{
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo__academy-fill {
+  fill: $darkgrey;
 }
 
 @media (min-width: $tablet-width) {

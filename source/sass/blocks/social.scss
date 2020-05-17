@@ -21,10 +21,20 @@
   height: 19px;
   margin: 0 15px;
 
-  offset-path: {
-    fill: $darkgrey;
+  &:hover .social__fill {
+    fill: $green;
+  }
+
+  &:active .social__fill {
+    fill: $green;
+    opacity: 0.3;
   }
 }
+
+.social__fill {
+  fill: $darkgrey;
+}
+
 
 @media (min-width: $tablet-width) {
   .social {
