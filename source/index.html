@@ -81,14 +81,14 @@
             </p>
             <div class="example__total">
               <p class="example__weight">
-                5 кг
-                <span class="example__weight-label">Снижение веса</span>
+                <span class="example__weight-value">5 кг</span>
+                <span class="example__weight-label">Снижение <br>веса</span>
               </p>
               <p class="example__period">
-                60 дней
-                <span class="example__period-label">Затрачено времени</span>
+                <span class="example__period-value">60 дней</span>
+                <span class="example__period-label">Затрачено <br>времени</span>
               </p>
-              <p class="example__costs">Затраты на питание: 15 000 руб.</p>
+              <p class="example__costs">Затраты на питание: <span>15 000 руб.</span></p>
             </div>
           </div>
           <div class="slider">
@@ -98,7 +98,10 @@
             </div>
             <div class="slider__controls">
               <button type="button" class="slider__button slider__button--before">Было</button>
-              <input type="range" class="slider__range">
+              <div class="slider__range">
+                <div class="slider__scale"></div>
+                <div class="slider__thumb"></div>
+              </div>
               <button type="button" class="slider__button slider__button--after">Стало</button>
             </div>
           </div>

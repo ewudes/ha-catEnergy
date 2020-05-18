@@ -4,6 +4,7 @@ body {
   line-height: 18px;
   color: $black;
   margin: 0;
+  counter-reset: num;
 }
 
 .visually-hidden:not(:focus):not(:active) {

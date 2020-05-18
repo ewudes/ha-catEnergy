@@ -1,5 +1,14 @@
 .address__wrap {
   @include horizontal-padding($mobile-padding);
+
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.address__title,
+.address__description {
+  width: 50%;
 }
 
 .address__title {
@@ -23,6 +32,8 @@
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0 70px;
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 
   .address__title {
@@ -50,7 +61,7 @@
   .address__wrap {
     width: 570px;
     background-color: $white;
-    transform: translate(-290px, 80px);
+    transform: translate(-330px, 90px);
   }
 
   .address__description {
