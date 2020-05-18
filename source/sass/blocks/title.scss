@@ -11,6 +11,10 @@
     padding-bottom: 30px;
   }
 
+  &--selection {
+    padding-bottom: 22px;
+  }
+
   &--example {
     margin-bottom: 25px;
   }
@@ -23,6 +27,11 @@
     &--catalog {
       padding: 0;
     }
+
+    &--selection {
+      padding-top: 60px;
+      padding-left: 0;
+    }
   }
 }
 
@@ -31,6 +40,10 @@
     &--example {
       transform: translateY(-135px);
       margin-bottom: 10px;
+    }
+
+    &--selection {
+      padding-top: 0;
     }
   }
 }

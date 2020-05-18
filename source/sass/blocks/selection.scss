@@ -1,5 +1,9 @@
 .selection {
   @include horizontal-padding($mobile-padding);
+
+  &--form {
+    padding: 0;
+  }
 }
 
 .selection__list {
@@ -72,7 +76,11 @@
   &--form {
     @include oswald($regular);
     border: none;
-    padding: 0 20px;
+    margin-top: 0;
+
+    @include horizontal-padding($mobile-padding);
+    padding-right: 30px;
+    text-transform: uppercase;
   }
 }
 
@@ -168,6 +176,13 @@
     font-size: 16px;
     line-height: 24px;
     margin-top: 24px;
+
+    &--form {
+      margin-top: 40px;
+      padding-left: 40px;
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 
   .selection__link {
@@ -231,7 +246,7 @@
   }
 
   .selection__description {
-    margin-top: 70px;
-    padding-bottom: 0;
+    margin-top: 35px;
+    padding: 0;
   }
 }
