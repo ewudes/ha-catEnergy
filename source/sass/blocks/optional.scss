@@ -1,6 +1,5 @@
 .optional__list {
   @include reset-list-styles();
-
   @include horizontal-padding($mobile-padding);
 }
 

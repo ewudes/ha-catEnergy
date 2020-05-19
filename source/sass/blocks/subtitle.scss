@@ -8,11 +8,12 @@
   &--comment,
   &--extra {
     position: relative;
+
     &::after {
       content: " ";
       position: absolute;
       top: 15px;
-      left: 0px;
+      left: 0;
       width: 100vw;
       height: 4px;
       background-color: $green;
@@ -78,7 +79,7 @@
       content: " ";
       position: absolute;
       top: 20px;
-      left: 0px;
+      left: 0;
       width: 100vw;
       height: 4px;
       background-color: $green;

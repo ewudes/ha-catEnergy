@@ -158,21 +158,20 @@
   border-color: $error;
 }
 
-.selection-form__input[type=email],
-.selection-form__input[type=tel] {
+.selection-form__input[type="email"],
+.selection-form__input[type="tel"] {
   padding-right: 40px;
 }
 
-.selection-form__input[type=email]:active + .selection-form__email,
-.selection-form__input[type=email]:focus + .selection-form__email,
-.selection-form__input[type=tel]:active + .selection-form__phone,
-.selection-form__input[type=tel]:focus + .selection-form__phone {
-    fill: $green;
+.selection-form__input[type="email"]:active + .selection-form__email,
+.selection-form__input[type="email"]:focus + .selection-form__email,
+.selection-form__input[type="tel"]:active + .selection-form__phone,
+.selection-form__input[type="tel"]:focus + .selection-form__phone {
+  fill: $green;
 }
 
-.selection-form__input[type=email]:invalid + .selection-form__email,
-.selection-form__input[type=tel]:invalid + .selection-form__phone
-.selection-form__input[type=tel]:invalid + .selection-form__phone {
+.selection-form__input[type="email"]:invalid + .selection-form__email,
+.selection-form__input[type="tel"]:invalid + .selection-form__phone {
   fill: $error;
 }
 
@@ -287,6 +286,7 @@
   .selection-form {
     padding-bottom: 40px;
   }
+
   .selection-form__group {
     display: flex;
 
