@@ -71,6 +71,7 @@
 
 @media (min-width: $tablet-width) {
   .slider {
+    position: relative;
     margin-top: 220px;
     background-color: $grey;
   }

@@ -1,3 +1,15 @@
+@media (max-width: 767px) {
+  .nav {
+    height: 0;
+    overflow: hidden;
+
+    &--show,
+    &--nojs {
+      height: inherit;
+    }
+  }
+}
+
 .nav__list {
   @include reset-list-styles();
   text-transform: uppercase;
