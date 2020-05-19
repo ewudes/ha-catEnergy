@@ -2,23 +2,99 @@
   display: flex;
   flex-direction: column;
   border: none;
-  padding: 10px 20px;
+
+  @include horizontal-padding($mobile-padding);
+  padding-top: 22px;
+  padding-bottom: 15px;
   margin: 0;
 
   &:nth-child(2) {
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
   }
+
+  &--program {
+    padding: 10px 0;
+
+    .selection-form__row {
+      margin: 0;
+
+      @include horizontal-padding($mobile-padding);
+    }
+  }
+
+  &--submit {
+    padding-bottom: 0;
+  }
+
+  &--optional {
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
 }
 
 .selection-form__row {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 12px;
+
+  &--optional {
+    margin-bottom: 0;
+  }
+
+  &--contacts {
+    position: relative;
+  }
+}
+
+.selection-form__radio:checked + .selection-form__label {
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $green;
+  }
 }
 
 .selection-form__label {
   text-transform: uppercase;
   font-size: 16px;
+  padding: 13px 0;
+}
+
+.selection-form__radio + .selection-form__label {
+  position: relative;
+  padding-left: 45px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border: 1px solid $light-ashen;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $ashen;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .selection-form__input,
@@ -28,10 +104,171 @@
   color: $darkgrey;
 }
 
+.selection-form__input {
+  height: 45px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  border: 1px solid $light-ashen;
+  padding-left: 15px;
+  font-size: 14px;
+
+  @include oswald($regular);
+
+  &:hover {
+    border-color: $ashen;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $darkgrey;
+  }
+}
+
+.selection-form__input::-webkit-input-placeholder {
+  color: $darkgrey;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.selection-form__input::-moz-placeholder {
+  color: $darkgrey;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.selection-form__input:-ms-input-placeholder {
+  color: $darkgrey;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.selection-form__input::-ms-input-placeholder {
+  color: $darkgrey;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.selection-form__input::placeholder {
+  color: $darkgrey;
+  opacity: 1;
+  font-size: 16px;
+}
+
+.selection-form__input:invalid {
+  border-color: $error;
+}
+
+.selection-form__input[type="email"],
+.selection-form__input[type="tel"] {
+  padding-right: 40px;
+}
+
+.selection-form__input[type="email"]:active + .selection-form__email,
+.selection-form__input[type="email"]:focus + .selection-form__email,
+.selection-form__input[type="tel"]:active + .selection-form__phone,
+.selection-form__input[type="tel"]:focus + .selection-form__phone {
+  fill: $green;
+}
+
+.selection-form__input[type="email"]:invalid + .selection-form__email,
+.selection-form__input[type="tel"]:invalid + .selection-form__phone {
+  fill: $error;
+}
+
+.selection-form__email,
+.selection-form__phone {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  fill: $darkgrey;
+}
+
+.selection-form__phone {
+  right: 12px;
+}
+
 .selection-form__comment {
   width: 100%;
   border: 1px solid $grey;
   resize: none;
+  margin-top: 15px;
+  height: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @include oswald($regular);
+
+  &:hover {
+    border-color: $ashen;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $darkgrey;
+  }
+}
+
+.selection-form__checkbox + .selection-form__label {
+  position: relative;
+  padding-left: 45px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid $light-ashen;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $ashen;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.selection-form__checkbox:checked + .selection-form__label {
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 15px;
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='%2368b738' points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E");
+  }
+}
+
+.selection-form__checkbox:disabled + .selection-form__label {
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 15px;
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='%233d3d3d' points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E");
+  }
+}
+
+.selection-form__radio + .selection-form__label,
+.selection-form__checkbox + .selection-form__label {
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .selection-form__btn-submit {
@@ -42,25 +279,95 @@
 .selection-form__remark {
   @include arial();
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
+  .selection-form {
+    padding-bottom: 40px;
+  }
+
   .selection-form__group {
-    &--optional {
+    display: flex;
+
+    @include horizontal-padding(40px);
+    padding-top: 45px;
+
+    &--optional,
+    &--submit {
       flex-wrap: wrap;
       flex-direction: row;
+      padding-top: 40px;
+      justify-content: space-between;
     }
 
-    &:nth-child(2) {
+    &--program {
       border-left: 1px solid $grey;
       border-right: 1px solid $grey;
+      margin: 30px 40px 0;
+      padding: 20px 10px 10px;
+
+      & .selection-form__row {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--contacts {
+      padding-top: 60px;
+    }
+
+    &--submit {
+      padding-top: 30px;
     }
   }
 
+  .selection-form__radio + .selection-form__label {
+    padding-left: 60px;
+  }
+
   .selection-form__row {
-    &--optional {
-      width: 50%;
+    margin-bottom: 25px;
+
+    &--optional,
+    &--submit {
+      width: 45%;
     }
+  }
+
+  .selection-form__label {
+    font-size: 20px;
+  }
+
+  .selection-form__input {
+    height: 50px;
+  }
+
+  .selection-form__comment {
+    margin-top: 30px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 180px;
+  }
+
+  .selection-form__checkbox + .selection-form__label {
+    padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .selection-form__checkbox:checked + .selection-form__label,
+  .selection-form__checkbox:disabled + .selection-form__label {
+    &::after {
+      left: 10px;
+    }
+  }
+
+  .selection-form__remark {
+    text-align: left;
   }
 }
 
@@ -71,23 +378,67 @@
   }
 
   .selection-form__group {
-    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin-top: 70px;
+    box-sizing: border-box;
+
+    &:nth-child(1) {
+      margin-right: 6%;
+    }
 
     &:nth-child(1),
     &:nth-child(2) {
-      box-sizing: border-box;
-      flex-basis: 50%;
+      width: 47%;
+    }
+
+    &--program {
+      margin-left: 0;
+      margin-right: 0;
+      height: 190px;
+      padding: 15px 0;
+
+      & .selection-form__row {
+        margin-bottom: 0;
+        padding-left: 30px;
+      }
+    }
+
+    &--optional,
+    &--submit {
+      flex-direction: row;
+    }
+
+    &--submit {
+      margin-top: 60px;
+      margin-bottom: 45px;
     }
 
     &--contacts {
       flex-direction: row;
       flex-wrap: wrap;
     }
+  }
 
-    .selection-form__row {
-      &--contacts {
-        width: 50%;
-      }
+  .selection-form__row {
+    margin: 0;
+
+    &--contacts {
+      width: 46%;
     }
+
+    &--optional {
+      width: 20%;
+    }
+
+    &--submit {
+      width: 46%;
+    }
+  }
+
+  .selection-form__comment {
+    margin-top: 70px;
   }
 }

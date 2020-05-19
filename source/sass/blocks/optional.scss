@@ -1,13 +1,14 @@
 .optional__list {
   @include reset-list-styles();
+  @include horizontal-padding($mobile-padding);
 }
 
 .optional__item {
   padding: 15px 0;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $ashen;
 
   &:first-child {
-    border-top: 1px solid $grey;
+    border-top: 1px solid $ashen;
   }
 }
 
@@ -31,9 +32,15 @@
     @include horizontal-padding($tablet-padding);
   }
 
+  .optional__list {
+    margin-top: 80px;
+    padding: 0;
+  }
+
   .optional__item {
-    border-left: 1px solid $grey;
-    border-right: 1px solid $grey;
+    padding: 27px 40px;
+    border-left: 1px solid $ashen;
+    border-right: 1px solid $ashen;
   }
 }
 
@@ -42,7 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     width: $desktop-width;
-    margin-bottom: 30px;
+    margin-bottom: 85px;
 
     @include horizontal-padding($desktop-padding);
   }
@@ -50,6 +57,7 @@
   .optional__item {
     border: none;
     border-bottom: 2px solid $grey;
+    padding: 16px 0;
 
     &:first-child {
       border-top: 2px solid $grey;

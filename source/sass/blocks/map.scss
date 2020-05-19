@@ -1,11 +1,12 @@
 .map {
-  min-height: 380px;
+  min-height: 360px;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-position: center;
 }
 
 @media (min-width: $tablet-width) {
   .map {
+    min-height: 400px;
     background-image: url("../img/bg-map-tablet@1x.png");
   }
 }

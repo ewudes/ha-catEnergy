@@ -15,6 +15,7 @@
     width: $tablet-width;
     margin: 0 auto;
     box-sizing: border-box;
+    min-height: 150px;
 
     @include horizontal-padding($tablet-padding);
   }
