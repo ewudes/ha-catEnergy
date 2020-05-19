@@ -35,7 +35,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
   flex-grow: 1;
   margin: 0 18px;
 }
@@ -124,7 +123,7 @@
     background-color: $white;
     border: 1px solid $ashen;
     box-sizing: border-box;
-    box-shadow: 0px 0px 12px -5px rgba(4,4,4,0.75);
+    box-shadow: 0px 0px 12px -5px rgba(4,4,4,0.5);
 
     &::after {
       content: " ";
@@ -136,13 +135,27 @@
       height: 8px;
       border-radius: 50%;
       background-color: $green;
+    }
 
+    &:hover {
+      box-shadow: 0px 0px 12px -5px rgba(4,4,4,0.9);
+    }
+
+    &:active,
+    &:focus {
+      border-width: 2px;
+      border-color: $green;
     }
   }
 
   .slider__button {
     font-size: 20px;
     border-bottom: 1px dotted $ashen;
+    padding: 4px 0;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
   }
 }
 
