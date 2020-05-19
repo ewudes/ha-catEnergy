@@ -1,45 +1,38 @@
 .selection-form__group {
-  display: flex;
-  flex-direction: column;
   border: none;
 
   @include horizontal-padding($mobile-padding);
-  padding-top: 22px;
-  padding-bottom: 15px;
-  margin: 0;
 
   &:nth-child(2) {
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
   }
+}
 
-  &--program {
-    padding: 10px 0;
+.selection-form__row-wrap {
+  padding-top: 15px;
+  padding-bottom: 10px;
 
-    .selection-form__row {
-      margin: 0;
-
-      @include horizontal-padding($mobile-padding);
-    }
-  }
-
+  &--program,
+  &--optional,
   &--submit {
-    padding-bottom: 0;
+    padding-top: 0;
   }
 
-  &--optional {
-    padding-top: 12px;
-    padding-bottom: 0;
+  &--contacts {
+    padding-top: 5px;
   }
 }
 
 .selection-form__row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin: 10px 0;
 
-  &--optional {
-    margin-bottom: 0;
+  &--program,
+  &--optional,
+  &--submit {
+    margin: 0;
   }
 
   &--contacts {
@@ -192,7 +185,8 @@
   width: 100%;
   border: 1px solid $grey;
   resize: none;
-  margin-top: 15px;
+  margin-top: 35px;
+  font-size: 16px;
   height: 150px;
   padding: 10px;
   box-sizing: border-box;
@@ -284,54 +278,51 @@
 
 @media (min-width: $tablet-width) {
   .selection-form {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
+  }
+  .selection-form__group {
+    @include horizontal-padding(40px);
+
+    &:nth-child(2) {
+      border: none;
+    }
   }
 
-  .selection-form__group {
-    display: flex;
-
-    @include horizontal-padding(40px);
-    padding-top: 45px;
+  .selection-form__row-wrap {
+    &--program {
+      border: 1px solid $grey;
+      margin-top: 15px;
+      padding: 15px 25px;
+    }
 
     &--optional,
     &--submit {
+      display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
-      padding-top: 40px;
       justify-content: space-between;
     }
+  }
+
+  .selection-form__row {
+    margin: 25px 0;
 
     &--program {
-      border-left: 1px solid $grey;
-      border-right: 1px solid $grey;
-      margin: 30px 40px 0;
-      padding: 20px 10px 10px;
+      margin: 8px 0;
+    }
 
-      & .selection-form__row {
-        margin-bottom: 10px;
-      }
+    &--optional,
+    &--submit {
+      width: 45%;
+      margin-bottom: 5px;
     }
 
     &--contacts {
-      padding-top: 60px;
-    }
-
-    &--submit {
-      padding-top: 30px;
+      margin: 40px 0;
     }
   }
 
   .selection-form__radio + .selection-form__label {
     padding-left: 60px;
-  }
-
-  .selection-form__row {
-    margin-bottom: 25px;
-
-    &--optional,
-    &--submit {
-      width: 45%;
-    }
   }
 
   .selection-form__label {
@@ -343,7 +334,7 @@
   }
 
   .selection-form__comment {
-    margin-top: 30px;
+    margin-top: 65px;
     font-size: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -378,52 +369,44 @@
   }
 
   .selection-form__group {
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
-    padding: 0;
-    margin-top: 70px;
     box-sizing: border-box;
+    padding: 0;
 
     &:nth-child(1) {
-      margin-right: 6%;
+      margin-right: 5%;
     }
 
     &:nth-child(1),
     &:nth-child(2) {
       width: 47%;
+      padding: 0;
+      margin-top: 70px;
     }
+  }
+
+  .selection-form__row-wrap {
+    padding: 0;
 
     &--program {
-      margin-left: 0;
-      margin-right: 0;
-      height: 190px;
-      padding: 15px 0;
-
-      & .selection-form__row {
-        margin-bottom: 0;
-        padding-left: 30px;
-      }
-    }
-
-    &--optional,
-    &--submit {
-      flex-direction: row;
-    }
-
-    &--submit {
-      margin-top: 60px;
-      margin-bottom: 45px;
+      margin: 0;
+      padding: 9px 40px;
+      box-sizing: border-box;
     }
 
     &--contacts {
-      flex-direction: row;
-      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
   .selection-form__row {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &--program {
+      margin: 10px 0;
+    }
 
     &--contacts {
       width: 46%;
@@ -435,7 +418,14 @@
 
     &--submit {
       width: 46%;
+      padding-top: 45px;
     }
+  }
+
+  .selection-form__btn-submit {
+    @include oswald($regular);
+
+    font-size: 18px;
   }
 
   .selection-form__comment {

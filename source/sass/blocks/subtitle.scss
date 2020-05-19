@@ -22,11 +22,11 @@
   }
 
   &--contacts {
-    padding-top: 30px;
+    padding-top: 20px;
     margin-bottom: 15px;
 
     &::after {
-      top: 45px;
+      top: 40px;
       left: 200px;
     }
   }
@@ -48,10 +48,11 @@
   }
 
   &--extra {
-    margin-top: 10px;
+    padding-top: 15px;
     margin-bottom: 22px;
 
     &::after {
+      top: 30px;
       left: 160px;
     }
   }
@@ -104,7 +105,7 @@
     }
 
     &--comment {
-      margin-top: 25px;
+      padding: 0;
 
       &::after {
         left: 210px;
@@ -125,13 +126,15 @@
     }
 
     &--extra {
-      margin-top: 45px;
+      padding-top: 50px;
 
       &::before {
+        top: 70px;
         right: 670px;
       }
 
       &::after {
+        top: 70px;
         left: 250px;
       }
     }
@@ -148,9 +151,11 @@
       width: 100%;
       margin-top: 0;
       margin-bottom: 80px;
+      padding-top: 50px;
 
-      &::before {
-        top: 90px;
+      &::before,
+      &::after {
+        top: 70px;
       }
     }
 
@@ -165,14 +170,24 @@
     }
 
     &--comment {
-      margin-top: 0;
+      padding-top: 50px;
+
+      &::before,
+      &::after {
+        top: 70px;
+      }
     }
 
     &--extra {
-      margin-top: 0;
-      margin-bottom: 45px;
+      padding-top: 60px;
+      margin-bottom: 55px;
+
+      &::before {
+        top: 80px;
+      }
 
       &::after {
+        top: 80px;
         left: 250px;
       }
     }
