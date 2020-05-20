@@ -64,7 +64,7 @@
   .instructions {
     width: $tablet-width;
     margin: 0 auto;
-    padding-top: 10px;
+    padding-top: 18px;
     box-sizing: border-box;
 
     @include horizontal-padding($tablet-padding);
@@ -114,7 +114,7 @@
 @media (min-width: $desktop-width) {
   .instructions {
     width: $desktop-width;
-    padding-top: 35px;
+    padding-top: 40px;
 
     @include horizontal-padding($desktop-padding);
   }
@@ -127,6 +127,7 @@
   .instructions__item {
     width: 245px;
     padding-right: 0;
+    margin-bottom: 20px;
 
     &::after {
       right: 0;

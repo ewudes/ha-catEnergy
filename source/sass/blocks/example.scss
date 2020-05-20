@@ -3,13 +3,12 @@
 }
 
 .example__wrap {
-  @include horizontal-padding($mobile-padding);
-
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .example__info {
-  padding-top: 15px;
+  @include horizontal-padding($mobile-padding);
+  padding-top: 10px;
 }
 
 .example__description {
@@ -137,8 +136,6 @@
 @media (min-width: $desktop-width) {
   .example {
     border: none;
-    margin-top: 175px;
-    background-color: $grey;
   }
 
   .example__wrap {
@@ -152,12 +149,13 @@
 
   .example__info {
     padding: 0;
+    padding-right: 110px;
     margin: 0;
     width: 50%;
   }
 
   .example__description {
-    margin-top: 0;
+    margin-top: 150px;
   }
 
   .example__total {

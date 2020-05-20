@@ -38,8 +38,8 @@
 @media (min-width: $desktop-width) {
   .title {
     &--example {
-      transform: translateY(-135px);
       margin-bottom: 10px;
+      padding-top: 50px;
     }
 
     &--selection {
