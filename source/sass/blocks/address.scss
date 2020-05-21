@@ -2,7 +2,7 @@
   @include horizontal-padding($mobile-padding);
 
   display: flex;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
 }
 
@@ -22,6 +22,10 @@
   @include arial();
   line-height: 20px;
   color: $darkgrey;
+
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -32,7 +36,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0 70px;
-    padding-top: 50px;
+    padding-top: 65px;
     padding-bottom: 40px;
   }
 
@@ -46,6 +50,10 @@
     width: 180px;
     font-size: 16px;
     text-align: right;
+
+    br {
+      display: inline;
+    }
   }
 }
 
@@ -62,9 +70,11 @@
     width: 570px;
     background-color: $white;
     transform: translate(-330px, 90px);
+    padding: 50px 80px;
   }
 
   .address__description {
+    width: 160px;
     text-align: left;
   }
 }

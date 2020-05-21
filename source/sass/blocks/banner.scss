@@ -1,9 +1,14 @@
 .banner {
-  background-image: linear-gradient(to top, #ffffff 180px, transparent 180px), url("../img/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom, center bottom 180px;
+  background-position: center bottom, center bottom 175px;
   background-color: #63a73a;
+  background-size: contain;
   color: $white;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .banner__wrap {
@@ -15,7 +20,7 @@
   line-height: 36px;
   font-weight: inherit;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -62,27 +67,29 @@
   .banner__title {
     font-size: 60px;
     line-height: 60px;
-    padding-top: 60px;
+    padding-top: 57px;
   }
 
   .banner__subtitle {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 45px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   .banner__pic {
-    width: 659px;
-    height: 600px;
+    width: 710px;
+    height: 610px;
   }
 
   .banner__btn-selection {
     position: absolute;
-    top: 295px;
+    top: 285px;
     left: 120px;
     width: 245px;
     font-size: 20px;
     line-height: 20px;
+    padding: 16px 0;
   }
 }
 
@@ -95,6 +102,10 @@
     background-clip: border-box;
     background-size: 50%, 100%;
     padding-top: 150px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .banner__wrap {
@@ -117,13 +128,13 @@
 
   .banner__image {
     position: absolute;
-    top: 0;
-    left: 600px;
+    top: -10px;
+    left: 560px;
   }
 
   .banner__pic {
-    width: 500px;
-    height: 490px;
+    width: 550px;
+    height: 500px;
   }
 
   .banner__btn-selection {
