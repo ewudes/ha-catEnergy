@@ -27,6 +27,7 @@
   .optional {
     width: $tablet-width;
     margin: 0 auto;
+    padding-top: 10px;
     box-sizing: border-box;
 
     @include horizontal-padding($tablet-padding);
