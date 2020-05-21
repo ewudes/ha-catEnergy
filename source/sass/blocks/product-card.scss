@@ -48,22 +48,23 @@
 
 @media (min-width: $tablet-width) {
   .product-card {
-    margin: 25px 0;
-    margin-top: 30px;
+    position: relative;
+    background-color: $grey;
+    padding-top: 130px;
     padding-bottom: 40px;
-    padding-top: 5px;
-    background-image: linear-gradient(to top, $grey 430px, $white 430px);
 
     &--more {
-      display: block;
+      padding-top: 170px;
+      padding-bottom: 45px;
       border: 1px solid $grey;
-      background-image: none;
-      margin: 0;
-      transform: translateY(115px);
+      background-color: transparent;
     }
   }
 
   .product-card__image {
+    position: absolute;
+    top: -85px;
+    left: 0;
     display: flex;
     align-items: flex-end;
     height: 210px;

@@ -5,6 +5,7 @@ body {
   color: $black;
   margin: 0;
   counter-reset: num;
+  overflow-x: hidden;
 }
 
 .visually-hidden {

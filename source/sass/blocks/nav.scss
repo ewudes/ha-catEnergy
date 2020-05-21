@@ -52,6 +52,7 @@
   .nav__list {
     display: flex;
     flex-wrap: wrap;
+    max-width: 450px;
   }
 
   .nav__item {
@@ -76,6 +77,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .nav__list {
+    max-width: 600px;
+  }
+
   .nav__link {
     font-size: 20px;
     line-height: 24px;
