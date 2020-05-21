@@ -55,12 +55,6 @@
   text-decoration: none;
   padding: 20px 0;
 
-  svg {
-    width: 40px;
-    height: 42px;
-    margin-left: auto;
-  }
-
   &:hover .logo__academy-fill {
     fill: $green;
   }
@@ -72,6 +66,7 @@
 
 .logo__academy-fill {
   fill: $darkgrey;
+  margin-left: auto;
 }
 
 @media (min-width: $tablet-width) {
