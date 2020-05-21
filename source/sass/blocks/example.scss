@@ -136,6 +136,7 @@
 @media (min-width: $desktop-width) {
   .example {
     border: none;
+    background-image: linear-gradient(to top, $grey 460px, $white 460px);
   }
 
   .example__wrap {
@@ -151,7 +152,6 @@
     padding: 0;
     padding-right: 110px;
     margin: 0;
-    width: 50%;
   }
 
   .example__description {
