@@ -3,6 +3,7 @@
 }
 
 .example__wrap {
+  padding-top: 7px;
   padding-bottom: 30px;
 }
 
@@ -144,6 +145,7 @@
     width: $desktop-width;
     margin: 0 auto;
     box-sizing: border-box;
+    overflow-x: visible;
 
     @include horizontal-padding($desktop-padding);
   }
@@ -152,6 +154,7 @@
     padding: 0;
     padding-right: 110px;
     margin: 0;
+    z-index: 1;
   }
 
   .example__description {
@@ -172,7 +175,7 @@
   .example__costs {
     width: 100%;
     text-align: left;
-    padding-top: 25px;
+    padding: 25px 0;
 
     span {
       margin-left: 60px;

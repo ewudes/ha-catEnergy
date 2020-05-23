@@ -1,5 +1,6 @@
 .selection-form__group {
   border: none;
+  padding-bottom: 0;
 
   @include horizontal-padding($mobile-padding);
 
@@ -13,21 +14,28 @@
   padding-top: 15px;
   padding-bottom: 10px;
 
-  &--program,
-  &--optional,
-  &--submit {
+  &--program {
+    padding-top: 8px;
+  }
+
+  &--optional {
     padding-top: 0;
   }
 
   &--contacts {
-    padding-top: 5px;
+    padding-top: 15px;
+  }
+
+  &--submit {
+    padding-top: 10px;
+    padding-bottom: 18px;
   }
 }
 
 .selection-form__row {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin-bottom: 13px;
 
   &--program,
   &--optional,
@@ -45,10 +53,10 @@
     content: " ";
     position: absolute;
     top: 50%;
-    left: 12px;
+    left: 10px;
     transform: translateY(-50%);
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: $green;
   }
@@ -70,8 +78,8 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border: 1px solid $light-ashen;
     border-radius: 50%;
   }
@@ -79,13 +87,6 @@
   &:hover {
     &::before {
       border-color: $ashen;
-    }
-  }
-
-  &:active {
-    &::before,
-    &::after {
-      opacity: 0.3;
     }
   }
 }
@@ -113,7 +114,7 @@
 
   &:active,
   &:focus {
-    border-color: $darkgrey;
+    border: 2px solid $darkgrey;
   }
 }
 
@@ -185,7 +186,7 @@
   width: 100%;
   border: 1px solid $grey;
   resize: none;
-  margin-top: 35px;
+  margin-top: 30px;
   font-size: 16px;
   height: 150px;
   padding: 10px;
@@ -221,13 +222,6 @@
   &:hover {
     &::before {
       border-color: $ashen;
-    }
-  }
-
-  &:active {
-    &::before,
-    &::after {
-      opacity: 0.3;
     }
   }
 }
@@ -292,7 +286,7 @@
   .selection-form__row-wrap {
     &--program {
       border: 1px solid $grey;
-      margin-top: 15px;
+      margin-top: 25px;
       padding: 15px 25px;
     }
 
@@ -301,6 +295,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    &--contacts {
+      padding: 40px 0;
     }
   }
 
@@ -318,12 +316,25 @@
     }
 
     &--contacts {
-      margin: 40px 0;
+      margin: 20px 0;
+    }
+  }
+
+  .selection-form__radio:checked + .selection-form__label {
+    &::after {
+      width: 18px;
+      height: 18px;
+      left: 12px;
     }
   }
 
   .selection-form__radio + .selection-form__label {
     padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .selection-form__label {

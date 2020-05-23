@@ -2,8 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/app.min.js" as="script">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -145,7 +149,7 @@
               Приглашаем к сотрудничеству дилеров!
             </h3>
             <p class="address__description">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+              ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург
             </p>
           </div>
         </div>
@@ -183,12 +187,14 @@
           </li>
         </ul>
         <div class="copyright">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="logo__academy">
-            HTML Academy
-            <svg width="40" height="42" class="logo__academy-fill">
-              <use xlink:href="#icon-htmlacademy"></use>
-            </svg>
-          </a>
+          <div class="logo">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="logo__academy">
+              HTML Academy
+              <svg width="40" height="42" class="logo__academy-fill">
+                <use xlink:href="#icon-htmlacademy"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

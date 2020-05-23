@@ -17,7 +17,7 @@
 
   @include horizontal-padding($mobile-padding);
   padding-top: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .selection__title {
@@ -79,6 +79,7 @@
     @include oswald($regular);
     border: none;
     margin-top: 0;
+    padding-top: 4px;
 
     @include horizontal-padding($mobile-padding);
     padding-right: 30px;
@@ -180,7 +181,7 @@
     margin-top: 24px;
 
     &--form {
-      margin-top: 40px;
+      margin-top: 30px;
       padding-left: 40px;
       font-size: 20px;
       line-height: 28px;
