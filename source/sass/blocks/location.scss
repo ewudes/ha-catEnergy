@@ -6,8 +6,21 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .location {
+    &--index {
+      padding-top: 20px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .location {
     position: relative;
+
+    &--index {
+      padding-top: 0;
+      z-index: 100;
+    }
   }
 }

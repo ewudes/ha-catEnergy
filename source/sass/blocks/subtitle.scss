@@ -22,7 +22,7 @@
   }
 
   &--contacts {
-    padding-top: 20px;
+    padding-top: 27px;
     margin-bottom: 15px;
 
     &::after {
@@ -32,8 +32,11 @@
   }
 
   &--comment {
+    padding-top: 10px;
+
     &::after {
-      left: 150px;
+      top: 22px;
+      left: 140px;
     }
   }
 
@@ -48,11 +51,11 @@
   }
 
   &--extra {
-    padding-top: 15px;
+    padding-top: 25px;
     margin-bottom: 22px;
 
     &::after {
-      top: 30px;
+      top: 40px;
       left: 160px;
     }
   }
@@ -105,9 +108,12 @@
     }
 
     &--comment {
-      padding: 0;
+      &::before {
+        top: 30px;
+      }
 
       &::after {
+        top: 30px;
         left: 210px;
       }
     }
@@ -126,15 +132,15 @@
     }
 
     &--extra {
-      padding-top: 50px;
+      padding-top: 65px;
 
       &::before {
-        top: 70px;
+        top: 85px;
         right: 670px;
       }
 
       &::after {
-        top: 70px;
+        top: 85px;
         left: 250px;
       }
     }

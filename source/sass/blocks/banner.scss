@@ -48,10 +48,12 @@
   .banner {
     background: none;
     color: $black;
+    margin-bottom: -80px;
   }
 
   .banner__wrap {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     width: $tablet-width;
     margin: 0 auto;
     box-sizing: border-box;
@@ -83,13 +85,19 @@
   }
 
   .banner__btn-selection {
-    position: absolute;
-    top: 285px;
-    left: 120px;
     width: 245px;
     font-size: 20px;
     line-height: 20px;
     padding: 16px 0;
+    margin-left: 100px;
+    margin-top: 30px;
+    order: 3;
+  }
+
+  .banner__image {
+    order: 4;
+    transform: translateY(-80px);
+    z-index: -1;
   }
 }
 
@@ -102,6 +110,7 @@
     background-clip: border-box;
     background-size: auto 620px, 100%;
     padding-top: 150px;
+    margin-bottom: 0;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, transparent 50%, #64a83b 0);
@@ -124,12 +133,14 @@
 
   .banner__subtitle {
     padding-left: 40px;
+    max-width: 450px;
   }
 
   .banner__image {
     position: absolute;
-    top: -10px;
+    top: 75px;
     left: 490px;
+    z-index: 1;
   }
 
   .banner__pic {
@@ -138,7 +149,6 @@
   }
 
   .banner__btn-selection {
-    top: 307px;
-    left: 120px;
+    margin: 36px 38px;
   }
 }

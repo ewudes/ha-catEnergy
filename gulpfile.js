@@ -19,14 +19,13 @@ var svgstore = require("gulp-svgstore");
 var server = require("browser-sync").create();
 
 gulp.task("clean", function () {
-  return del("build");
+  return del("build/**");
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -42,6 +41,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -51,6 +51,7 @@ gulp.task("css", function () {
 
 gulp.task("script-min", function() {
   return gulp.src("source/js/**/*.js")
+  .pipe(gulp.dest("build/js"))
   .pipe(uglify())
   .pipe(rename({suffix: ".min"}))
   .pipe(gulp.dest("build/js"));

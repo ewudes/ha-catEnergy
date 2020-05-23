@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  padding-top: 35px;
+  padding-top: 32px;
 }
 
 .slider__img-wrap {
@@ -210,7 +210,21 @@
   }
 
   .slider__item {
-    height: 650px;
+    height: 738px;
+  }
+
+  .slider__item--before {
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 190px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $grey;
+    }
   }
 
   .slider__item--after {
@@ -223,9 +237,8 @@
     width: 770px;
 
     &::after {
-      top: 60px;
-      bottom: -20px;
-      z-index: -1;
+      top: 61px;
+      z-index: 0;
     }
   }
 
